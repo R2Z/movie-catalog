@@ -33,7 +33,7 @@ object GraphUtils {
     def apply(id: String, value: String, nodeType: NodeType.Value) = new NodeValue(id, value, nodeType)
   }*/
 
-  case class NodeValue(val id: String, val value: String, val nodeType: NodeType.Value)
+  case class NodeValue(id: String, value: String, nodeType: NodeType.Value)
 
   case class Node(nodeValue: NodeValue, parent: Option[Node] = None)
 
