@@ -13,7 +13,7 @@ object GraphUtils {
     val Movie, Crew = Value
   }
 
-  class NodeValue(val id: String, val value: String, val nodeType: NodeType.Value) {
+  /*class NodeValue(val id: String, val value: String, val nodeType: NodeType.Value) {
 
     override def equals(that: Any): Boolean = {
       that match {
@@ -31,7 +31,9 @@ object GraphUtils {
 
   object NodeValue {
     def apply(id: String, value: String, nodeType: NodeType.Value) = new NodeValue(id, value, nodeType)
-  }
+  }*/
+
+  case class NodeValue(val id: String, val value: String, val nodeType: NodeType.Value)
 
   case class Node(nodeValue: NodeValue, parent: Option[Node] = None)
 
